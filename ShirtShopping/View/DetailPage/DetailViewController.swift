@@ -95,7 +95,7 @@ class DetailViewController: UIViewController {
         btn.setTitle(" Add to Basket ", for: .normal)
         btn.layer.cornerRadius = 10
         btn.setTitleColor(UIColor.white, for: .normal)
-        btn.backgroundColor = UIColor.init(red: 31/255, green: 165/255, blue: 98/255, alpha: 1)
+        btn.backgroundColor = UIColor.black//UIColor.init(red: 31/255, green: 165/255, blue: 98/255, alpha: 1)
         return btn
     }()
     
