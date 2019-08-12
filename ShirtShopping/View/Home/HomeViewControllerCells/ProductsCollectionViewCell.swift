@@ -101,6 +101,7 @@ extension ProductsCollectionViewCell {
     func setValuesForDetailScreen(){
         lblName.isHidden = true
         lblPrice.isHidden = true
+        btnFavourite.isHidden = true
     }
 }
 
