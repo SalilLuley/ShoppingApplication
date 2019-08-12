@@ -61,32 +61,40 @@ class DetailViewController: UIViewController {
         let btn = UIButton()
         btn.setTitle(" S ", for: .normal)
         btn.layer.cornerRadius = 10
-        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
-        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
+        btn.backgroundColor = UIColor.black
+        btn.setTitleColor(UIColor.white, for: .normal)
+//        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
+//        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
         return btn
     }()
     let btnSizeMedium : UIButton = {
         let btn = UIButton()
         btn.setTitle(" M ", for: .normal)
         btn.layer.cornerRadius = 10
-        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
-        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
+        btn.backgroundColor = UIColor.black
+        btn.setTitleColor(UIColor.white, for: .normal)
+//        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
+//        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
         return btn
     }()
     let btnSizeLarge : UIButton = {
         let btn = UIButton()
         btn.setTitle(" L ", for: .normal)
         btn.layer.cornerRadius = 10
-        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
-        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
+        btn.backgroundColor = UIColor.black
+        btn.setTitleColor(UIColor.white, for: .normal)
+//        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
+//        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
         return btn
     }()
     let btnSizeExtraLarge : UIButton = {
         let btn = UIButton()
         btn.setTitle(" XL ", for: .normal)
         btn.layer.cornerRadius = 10
-        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
-        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
+        btn.backgroundColor = UIColor.black
+        btn.setTitleColor(UIColor.white, for: .normal)
+//        btn.backgroundColor = UIColor.init(red: 244/255, green: 244/255, blue: 249/255, alpha: 1)
+//        btn.setTitleColor(UIColor.init(red: 206/255, green: 206/255, blue: 207/255, alpha: 1), for: .normal)
         return btn
     }()
     
@@ -95,7 +103,7 @@ class DetailViewController: UIViewController {
         btn.setTitle(" Add to Basket ", for: .normal)
         btn.layer.cornerRadius = 10
         btn.setTitleColor(UIColor.white, for: .normal)
-        btn.backgroundColor = UIColor.black//UIColor.init(red: 31/255, green: 165/255, blue: 98/255, alpha: 1)
+        btn.backgroundColor = UIColor.black//UIColor.init(red: 31/255, green: 165/255, blue: 98/255, alpha: 1) //Green Color
         return btn
     }()
     
