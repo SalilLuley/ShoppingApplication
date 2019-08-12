@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TblHomeDataSource:NSObject, UITableViewDelegate, UITableViewDataSource {
+class TblHomeDataSource:UIViewController, UITableViewDelegate, UITableViewDataSource {
     let titleNames = ["Nike", "You may also like"]
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,6 +32,11 @@ class TblHomeDataSource:NSObject, UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController.pushViewController(DetailViewController(), animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 300
@@ -40,31 +45,39 @@ class TblHomeDataSource:NSObject, UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 70
+        if section == 0 {
+            return 0
+        } else {
+            return 70
+        }
     }
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let contentView : UIView = {
-            let v = UIView()
-            v.layer.borderWidth = 0.2
-            v.layer.borderColor = UIColor.gray.cgColor
-            v.backgroundColor = .white
-            return v
-        }()
-        
-        let lblSectionTitle : UILabel = {
-            let lbl = UILabel()
-            lbl.text = titleNames[section]
-            lbl.font = UIFont.init(name: FontName.HelveticaBold.rawValue, size: 20)
-            return lbl
-        }()
-        contentView.addSubview(lblSectionTitle)
-        lblSectionTitle.snp.makeConstraints { (make) in
-            make.top.bottom.trailing.equalToSuperview()
-            make.leading.equalToSuperview().offset(10)
+        if section == 0 {
+            return UIView()
+        } else {
+            let contentView : UIView = {
+                let v = UIView()
+                v.layer.borderWidth = 0.2
+                v.layer.borderColor = UIColor.gray.cgColor
+                v.backgroundColor = .white
+                return v
+            }()
+            
+            let lblSectionTitle : UILabel = {
+                let lbl = UILabel()
+                lbl.text = titleNames[section]
+                lbl.font = UIFont.init(name: FontName.HelveticaBold.rawValue, size: 20)
+                return lbl
+            }()
+            contentView.addSubview(lblSectionTitle)
+            lblSectionTitle.snp.makeConstraints { (make) in
+                make.top.bottom.trailing.equalToSuperview()
+                make.leading.equalToSuperview().offset(10)
+            }
+            return contentView
         }
-        return contentView
     }
     
     

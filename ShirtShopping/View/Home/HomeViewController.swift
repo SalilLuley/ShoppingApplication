@@ -37,9 +37,16 @@ class HomeViewController : UIViewController {
         self.view.backgroundColor = .white
         cvMenu.dataSource = menuDataSource
         cvMenu.delegate = menuDataSource
-        
+                
         tblHomePage.dataSource = tblHomeDataSource
         tblHomePage.delegate = tblHomeDataSource
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        setNavigationBar()
+    }
+    func setNavigationBar(){
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Shoe Market"
     }
 }
 
@@ -50,7 +57,7 @@ extension HomeViewController{
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.trailing.equalToSuperview()
             make.leading.equalToSuperview().offset(10)
-            make.height.equalToSuperview().multipliedBy(0.1)
+            make.height.equalToSuperview().multipliedBy(0.07)
         }
     }
     func setupTblHomePage(){
