@@ -45,7 +45,7 @@ class HomeViewController : UIViewController {
         setNavigationBar()
     }
     func setNavigationBar(){
-        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Shoe Market"
     }
 }
